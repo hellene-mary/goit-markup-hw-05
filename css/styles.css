@@ -146,6 +146,7 @@ img {
     line-height: 1.14;
     letter-spacing: 0.02em;
     display: flex;
+    align-items: center;
     fill: var(--second-text-color);
 
     transition-property: color;
