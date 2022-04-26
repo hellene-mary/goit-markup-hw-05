@@ -80,6 +80,18 @@ img {
     color: var(--color-accent);
 }
 
+.current::after{
+    content: "";
+    display: block;
+    color: var(--color-accent);
+    height: 4px;
+    width: 100%;
+    background: var(--color-accent);
+    border-radius: 2px;
+}
+
+
+
 .list  {
     list-style: none;
 }
