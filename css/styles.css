@@ -4,6 +4,7 @@
     --second-bgc: #F5F4FA;
     --text-color: #212121;
     --second-text-color: #757575;
+    --text-color-light: #FFFFFF;
     --color-button: #2196F3;
     --color-accent:#2196F3;
 }
@@ -202,7 +203,7 @@ img {
 
 
 .hero-title {
-    color: #FFFFFF;
+    color: var(--text-color-light);
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -216,7 +217,7 @@ img {
 }
 
 .hero-button { 
-    color: #FFFFFF;
+    color: var(--text-color-light);
     background-color: var(--color-button);
     font-family: inherit;
     font-style: normal;
@@ -313,6 +314,35 @@ img {
 .foto-list {
     display: flex;
     justify-content: space-between;
+}
+
+.foto-item{
+    position: relative;
+}
+
+.foto-box{
+    display: flex;
+    width: 100%;
+    height: 70px;
+    background: rgba(47, 48, 58, 0.8);
+    align-content: space-around;
+    justify-content: space-around;
+    align-items: center;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+
+.foto-text{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--text-color-light);
 }
 
 
@@ -455,7 +485,7 @@ img {
 
 .footer-logo {
     text-decoration: none;
-    color: #FFFFFF;
+    color: var(--text-color-light);
     font-family: 'Raleway', Tahoma, sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -481,7 +511,7 @@ img {
 
 
 .address {
-    color: #FFFFFF;
+    color: var(--text-color-light);
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -513,7 +543,7 @@ img {
 }
 
 .footer-text{
-    color: #FFFFFF;
+    color: var(--text-color-light);
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -540,7 +570,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    fill: #ffffff;
+    fill: var(--text-color-light);
 
     transition-property: background-color, fill;
     transition-duration: 250ms;
@@ -549,7 +579,7 @@ img {
 
 .footer-soc-link:hover, .footer-soc-link:focus {
     background-color: var(--color-accent);
-    fill: #FFFFFF;
+    fill: var(--text-color-light);
 }
 
 
@@ -591,7 +621,7 @@ img {
 }
 
 .btn:hover, .btn:focus {
-    color: #FFFFFF;
+    color: var(--text-color-light);
     background-color: var(--color-button);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
     0px 1px 2px rgba(0, 0, 0, 0.08), 
