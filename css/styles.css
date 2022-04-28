@@ -81,16 +81,6 @@ img {
     color: var(--color-accent);
 }
 
-.current::after{
-    content: "";
-    display: block;
-    color: var(--color-accent);
-    height: 4px;
-    width: 100%;
-    background: var(--color-accent);
-    border-radius: 2px;
-}
-
 
 
 .list  {
@@ -121,8 +111,25 @@ img {
     display: flex;
 }
 
+.nav-item{
+    position: relative;
+}
+
 .nav-item:not(:last-child) {
     margin-right: 50px;
+}
+
+.current::after{
+    content: "";
+    display: block;
+    color: var(--color-accent);
+    height: 4px;
+    width: 100%;
+    background: var(--color-accent);
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -32px;
 }
 
 
@@ -651,18 +658,6 @@ img {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-item:hover, .portfolio-item:focus{
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
-    0px 4px 4px rgba(0, 0, 0, 0.06), 
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-    cursor: pointer;
-}
-
-.portfolio-item:hover .portfolio-overlay,
-.portfolio-item:focus .portfolio-overlay {
-    opacity: 1;
-}
-
 .portfolio-text{
     border: 1px solid #EEEEEE;
     padding: 20px 24px;
@@ -683,29 +678,44 @@ img {
     letter-spacing: 0.03em;
 }
 
-.portfolio-overlay{
-    display: flex;
-    background-color: rgba(33, 150, 243, 0.9);
-
-    padding: 24px;
-    width: 100%;
-    height: 294px;
-
-    position: absolute; 
-    left: 0;
-    top: 0;
-    opacity: 0;
+.portfolio-item:hover, .portfolio-item:focus{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+    0px 4px 4px rgba(0, 0, 0, 0.06), 
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
 }
 
-.portfolio-overlay-text{
+.portfolio-item:hover .portfolio-text-cover,
+.portfolio-item:focus .portfolio-text-cover {
+    transform: translateY(0);
+}
+
+
+.portfolio-wrap{
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-text-cover{
     color: var(--text-color-light);
+    background-color: rgba(33, 150, 243, 0.9);
+    padding: 24px;
+    width: 100%;
+    height: 100%;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.56;
     letter-spacing: 0.03em;
     align-self: center;
-}
 
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: auto;
+}
 
 
 
