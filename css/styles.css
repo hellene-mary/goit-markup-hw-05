@@ -179,7 +179,7 @@ img {
 
 .contacts-email:hover .contacts-icon-email, 
 .contacts-email:focus .contacts-icon-email{
-    fill: var(--color-accent)
+    fill: currentColor;
 }
 
 .contacts-tel:hover, .contacts-tel:focus  {
@@ -188,7 +188,7 @@ img {
 
 .contacts-tel:hover .contacts-icon-tel,
 .contacts-tel:focus .contacts-icon-tel{
-    fill: var(--color-accent)
+    fill:  currentColor;
 }
 
 
@@ -633,6 +633,11 @@ img {
     position: absolute;
     top: 8px;
     right: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-content: space-around;
 }
 
 .is-hidden{
